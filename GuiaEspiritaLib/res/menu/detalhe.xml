@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ver_no_mapa"
+        android:title="Ver no Mapa"
+        android:icon="@drawable/ic_menu_mapmode"/>
+    <item
+        android:id="@+id/add_bookmark"
+        android:title="Adic. aos Favoritos"
+        android:icon="@drawable/ic_menu_favorite"/>
+    <item
+        android:id="@+id/del_bookmark"
+        android:title="Rem. dos Favoritos"
+        android:icon="@drawable/ic_menu_favorite"/>
+</menu>

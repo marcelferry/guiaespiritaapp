@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10sp"  >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundcorners_white">
+
+        <ImageButton
+            android:id="@+id/AddButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@android:drawable/ic_menu_add" />
+
+        <TextView
+            android:id="@+id/DicaAdd"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/AddButton"
+            android:gravity="center"
+            android:text="Você não encontrou sua entidade?"
+            android:textColor="#888888"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/AddEntidade"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/DicaAdd"
+            android:layout_toRightOf="@id/AddButton"
+            android:gravity="center"
+            android:text="Adicionar nova entidade"
+            android:textColor="#888888"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:id="@+id/ControlButtons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/ContactScroll"
+        android:padding="5dip" >
+
+        <Button
+            android:id="@+id/OkDialog"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@android:string/ok" />
+
+        <Button
+            android:id="@+id/CancelDialog"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@android:string/cancel" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/ContactScroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffffff"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/lbInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Info:" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/txt_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:hint="Informações..."
+                android:inputType="textMultiLine"
+                android:lines="5"
+                android:text=""
+                android:textSize="14sp" >
+            </EditText>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

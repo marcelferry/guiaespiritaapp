@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingTop="5dp" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/tipoImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/ImgTpEntidade"
+            android:src="@drawable/list_icon_entidade" />
+
+        <TextView
+            android:id="@+id/nome"
+            style="@style/ItemNome"
+            android:layout_toRightOf="@id/tipoImage"
+            android:text="nome" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/endereco"
+            style="@style/ItemDetalhes"
+            android:layout_below="@id/nome"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tipoImage"
+            android:text="endereco"
+            android:visibility="gone" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/bairro"
+            style="@style/ItemDetalhes"
+            android:layout_below="@id/endereco"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tipoImage"
+            android:text="bairro" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/distancia"
+            style="@style/ItemDetalhesDistancia"
+            android:layout_below="@id/endereco"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/bairro"
+            android:text="" >
+        </TextView>
+    </RelativeLayout>
+
+</LinearLayout>

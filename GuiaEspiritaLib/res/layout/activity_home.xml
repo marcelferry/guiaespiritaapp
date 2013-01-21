@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/db1_root"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff">
+    <include 
+        android:id="@+id/header"
+        android:layout_alignParentTop="true"
+        layout="@layout/home_title_bar" />
+
+    <LinearLayout
+        android:id="@+id/adMob"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true" />
+
+<ScrollView     
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/header"
+    android:layout_above="@id/adMob">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:padding="6dip">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <Button android:id="@+id/home_btn_lista_item"
+            style="@style/HomeButton"
+            android:onClick="onClickFeature"
+            android:text="@string/title_lista_item"
+            android:drawableTop="@drawable/home_button1"/>
+        <Button android:id="@+id/home_btn_favoritos"
+            style="@style/HomeButton"
+            android:onClick="onClickFeature"
+            android:text="@string/title_itens_favoritos"
+            android:drawableTop="@drawable/home_button2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <Button android:id="@+id/home_btn_items_proximos"
+            style="@style/HomeButton"
+            android:onClick="onClickFeature"
+            android:text="@string/title_itens_proximos"
+            android:drawableTop="@drawable/home_button3"/>
+        <Button android:id="@+id/home_btn_mapa_proximos"
+            style="@style/HomeButton"
+            android:onClick="onClickFeature"
+            android:text="@string/title_mapa_proximos"
+            android:drawableTop="@drawable/home_button4"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <Button android:id="@+id/home_btn_country"
+            style="@style/HomeButton"
+            android:onClick="onClickFeature"
+            android:text="@string/title_country"
+            android:drawableTop="@drawable/home_button7"/>
+        <Button android:id="@+id/home_btn_preferences"
+            style="@style/HomeButton"
+            android:onClick="onClickFeature"
+            android:text="@string/title_preferences"
+            android:drawableTop="@drawable/home_button5"/>
+    </LinearLayout>
+        
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">     
+        <Button android:id="@+id/home_btn_about"
+            style="@style/HomeButton"
+            android:onClick="onClickFeature"
+            android:text="@string/title_about"
+            android:drawableTop="@drawable/home_button6"/>
+        <!--<Button android:id="@+id/home_btn_events"
+            style="@style/HomeButton"
+            android:onClick="onClickFeature"
+            android:text="@string/title_events"
+            android:drawableTop="@drawable/home_button8"/> -->
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:id="@+id/ControlButtons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/ContactScroll"
+        android:orientation="horizontal"
+        android:padding="20sp"  >
+
+        <Button
+            android:id="@+id/OkDialog"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_gray"
+            android:text="@android:string/ok"
+            style="@style/ButtonTextMedioWrap" />
+
+        <Button
+            android:id="@+id/CancelDialog"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_gray"
+            android:text="@android:string/cancel"
+            style="@style/ButtonTextMedioWrap" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/ContactScroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/widget98"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" 
+                    android:background="@drawable/roundcorners_white">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" >
+
+                        <TextView
+                            android:id="@+id/lbEndereco"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Endereço:" >
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/txt_endereco"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Endereço..."
+                            android:inputType="textCapWords"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textSize="14sp" >
+                        </EditText>
+                    </TableRow>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1sp"
+                        android:background="#cccccc"
+                        android:visibility="gone" />
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/lbBairrro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bairro:"
+                            android:visibility="gone" >
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/txt_bairro"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Bairro..."
+                            android:inputType="textCapWords"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textSize="14sp"
+                            android:visibility="gone" >
+                        </EditText>
+                    </TableRow>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1sp"
+                        android:background="#cccccc" 
+                        android:visibility="gone" />
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" 
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/lbCEP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CEP:"
+                            android:visibility="gone" >
+                        </TextView>
+
+                        <br.com.mythe.droid.common.view.CepEditText
+                            android:id="@+id/txt_cep"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="CEP..."
+                            android:inputType="number"
+                            android:text=""
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+                    </TableRow>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1sp"
+                        android:background="#cccccc" />
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" >
+
+                        <TextView
+                            android:id="@+id/lbCidade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cidade:" >
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/txt_cidade"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Cidade..."
+                            android:inputType="textCapWords"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textSize="14sp" >
+                        </EditText>
+                    </TableRow>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1sp"
+                        android:background="#cccccc" />
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" >
+
+                        <TextView
+                            android:id="@+id/lbEstado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Estado:" >
+                        </TextView>
+
+                        <Spinner
+                            android:id="@+id/spEstado"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:prompt="@string/estados" >
+                        </Spinner>
+                    </TableRow>
+                </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:summary=""
+        android:title="Preferências" >
+
+        <!--
+              ListPreference
+            android:defaultValue="-1"
+            android:dialogTitle="Selecione a distância máxima"
+            android:entries="@array/distance"
+            android:entryValues="@array/distance_values"
+            android:key="bitrate"
+            android:summary="O quanto é proximo?"
+            android:title="Próximo" /
+        -->
+
+		<ListPreference
+            android:defaultValue="Brasil"
+            android:dialogTitle="Selecione o país"
+            android:entries="@array/paises"
+            android:entryValues="@array/paises_values"
+            android:key="pais"
+            android:summary="Qual o país padrão para consulta?"
+            android:title="País" />
+
+        <Preference
+            android:key="syncUpdate"
+            android:summary="Sincroniza com a Base de Dados Central"
+            android:title="Buscar Atualizações" />
+        <Preference
+            android:key="syncInit"
+            android:summary="Apaga e Sincroniza com a Base de Dados Central"
+            android:title="Resetar Base" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="silentMode"
+            android:summary="Não exibir tela de login e registro"
+            android:title="Desabilitar Login" />
+        <!--CheckBoxPreference
+            android:defaultValue="false"
+            android:key="Fazer Logoff"
+            android:summary="Efetuar logoff do usuário logado"
+            android:title="Logado" / -->
+        
+    </PreferenceCategory>
+
+</PreferenceScreen>

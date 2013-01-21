@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout style="@style/ItemMoldura" >
+
+        <TextView
+            android:id="@+id/cidade"
+            style="@style/ItemNome"
+            android:text="@+id/cidade" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/quantidade"
+            style="@style/ItemDetalhes"
+            android:layout_below="@id/cidade"
+            android:layout_marginLeft="10dp"
+            android:text="@string/TextoCampo" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/qtd_depois"
+            style="@style/ItemDetalhes"
+            android:layout_below="@id/cidade"
+            android:layout_toRightOf="@id/quantidade"
+            android:text="@string/espEntidades" >
+        </TextView>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center"
+    android:paddingBottom="10px"
+    android:paddingLeft="10px"
+    android:paddingTop="10px" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/pais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:text="@+id/pais"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" >
+        </TextView>
+          
+        <TextView
+            android:id="@+id/quantidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="hi"
+            android:textColor="#6c6c6c" 
+            android:layout_marginLeft="10px"
+            android:layout_below="@id/pais">
+        </TextView>
+
+        <TextView
+            android:id="@+id/qtd_depois"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=" entidades"
+            android:textColor="#6c6c6c" 
+            android:layout_below="@id/pais"
+            android:layout_toRightOf="@id/quantidade">
+        </TextView>
+            
+    </RelativeLayout>
+</LinearLayout>

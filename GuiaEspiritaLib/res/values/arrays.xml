@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array
+        name="distance">
+        <item>Default(20)</item>
+        <item>5 km</item>
+        <item>10 km</item>
+        <item>15 km</item>
+        <item>30 km</item>
+        <item>50 km</item>
+    </string-array>
+    <string-array
+        name="distance_values">
+        <item>-1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>30</item>
+        <item>50</item>
+    </string-array>
+    <string name="tipo_items">Selecione...</string>
+    <string-array name="tipo_item">
+        <item id="centro">Casa Espírita</item>
+        <item id="escola">Escola Espírita</item>
+        <item id="livraria">Livraria Espírita</item>
+        <item id="cfas">Casa com CFAS</item>
+        <item id="assitencia">Entidade Assistêncial</item>
+        <item id="federacao">Federação</item>
+        <item id="outros">Outros</item>
+    </string-array>
+    <string-array name="tipo_item_value">
+        <item id="centro">centro</item>
+        <item id="escola">escola</item>
+        <item id="livraria">livraria</item>
+        <item id="cfas">cfas</item>
+        <item id="assistencia">assistencia</item>
+        <item id="federacao">federacao</item>
+        <item id="outros">outros</item>
+    </string-array>    
+</resources>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/custom_title_bar" />
+        
+   <LinearLayout android:id="@+id/adMob" 
+       android:layout_width="fill_parent" 
+       android:layout_height="wrap_content" 
+       android:gravity="center_horizontal"
+       android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"        
+        android:orientation="horizontal"
+        android:padding="20sp" 
+        android:layout_above="@id/adMob">
+
+        <ToggleButton
+            android:id="@+id/contatos"
+            style="@style/ButtonTextMedioWrap"
+            android:layout_weight="1"
+            android:background="@drawable/btn_gray"
+            android:textOn="@string/btnContatos"
+            android:textOff="@string/btnContatos"
+            android:onClick="onContatosToogleClicked"  />
+
+        <ToggleButton
+            android:id="@+id/dicas"
+            style="@style/ButtonTextMedioWrap"
+            android:layout_weight="1"
+            android:background="@drawable/btn_gray"
+            android:textOn="@string/btnDicas"
+            android:textOff="@string/btnDicas"
+            android:onClick="onDicasToogleClicked" />
+
+        <ToggleButton
+            android:id="@+id/eventos"
+            style="@style/ButtonTextMedioWrap"
+            android:layout_weight="1"
+            android:background="@drawable/btn_gray"
+            android:textOn="@string/btnEventos" 
+            android:textOff="@string/btnEventos"
+            android:onClick="onEventosToogleClicked"  />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom"
+        android:layout_below="@id/header" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffffff"
+            android:orientation="vertical"
+            android:padding="10sp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundcorners_white"
+                android:orientation="vertical"
+                android:padding="10sp" >
+
+                <TextView
+                    android:id="@+id/txt_entidade"
+                    style="@style/ItemNomeDetalhe"
+                    android:text="Nome da Entidade Bem Grande Mesmo" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txt_endereco"
+                    style="@style/ItemDetalhes"
+                    android:text="Rua de Teste do Endereco 1"
+                    android:textStyle="bold" >
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/txt_bairro"
+                        style="@style/ItemDetalhes"
+                        android:text="Nosso Bairro"
+                        android:textStyle="bold" >
+                    </TextView>                
+
+                    <TextView
+                        android:id="@+id/txt_cep"
+                        style="@style/ItemDetalhes"
+                        android:text="01.000-000"
+                        android:textStyle="bold" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/txt_cidade"
+                        style="@style/ItemDetalhes"
+                        android:text="cidade"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txt_estado"
+                        style="@style/ItemDetalhes"
+                        android:text="UF"
+                        android:textStyle="bold" >
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="#00FFFFFF" />
+
+            <Button
+                android:id="@+id/checkin"
+                style="@style/ButtonTextMedio"
+                android:background="@drawable/btn_blue"
+                android:text="@string/btnCheckin" 
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dip"
+                android:background="#00FFFFFF" />
+
+            <TextView
+                android:id="@+id/title_dicas"
+                style="@style/ItemSubTitulosDetalhe"
+                android:padding="5sp"
+                android:text="@string/titleDicas"
+                android:textStyle="bold" 
+                android:visibility="gone"/>
+
+            <TableLayout
+                android:id="@+id/table_dicas"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundcorners_white"
+                android:orientation="vertical"
+                android:padding="10sp" 
+                android:visibility="gone">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp" >
+                     <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/semDicas" >
+                    </TextView>
+                </TableRow>
+            </TableLayout>
+            
+            <TextView
+                android:id="@+id/title_eventos"
+                style="@style/ItemSubTitulosDetalhe"
+                android:padding="5sp"
+                android:text="@string/titleEventos"
+                android:textStyle="bold" 
+                android:visibility="gone"/>
+
+            <TableLayout
+                android:id="@+id/table_eventos"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundcorners_white"
+                android:orientation="vertical"
+                android:padding="10sp" 
+                android:visibility="gone">
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="10dp" >
+                     <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/semEventos" >
+                    </TextView>
+                </TableRow>
+            </TableLayout>
+            
+ 			<TextView
+                android:id="@+id/title_contatos"
+                style="@style/ItemSubTitulosDetalhe"
+                android:padding="5sp"
+                android:text="@string/titleContatos"
+                android:textStyle="bold" 
+                android:visibility="gone"/>
+            <LinearLayout
+                android:id="@+id/table_contatos"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundcorners_white"
+                android:orientation="vertical"
+                android:padding="10sp" 
+                android:visibility="gone">
+                
+                <TextView
+                    	android:id="@+id/msgSemContatos"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/semContatos"
+                        android:visibility="gone">
+                </TextView>
+
+                <LinearLayout
+                    android:id="@+id/blocoFone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/label_telefone"
+                        style="@style/ItemDetalhes"
+                        android:text="@string/lblTelefone"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txt_telefone"
+                        style="@style/ItemDetalhes"
+                        android:text="telefone"
+                        android:textStyle="bold" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/blocoSite"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/label_site"
+                        style="@style/ItemDetalhes"
+                        android:text="@string/lblWebSite"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txt_site"
+                        style="@style/ItemDetalhes"
+                        android:text="site"
+                        android:textStyle="bold" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/blocoEmail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/label_email"
+                        style="@style/ItemDetalhes"
+                        android:text="@string/lblEmail"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txt_email"
+                        style="@style/ItemDetalhes"
+                        android:text="email"
+                        android:textStyle="bold" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/blocoInfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/label_info"
+                        style="@style/ItemDetalhes"
+                        android:layout_width="fill_parent"
+                        android:text="@string/lblInfo"
+                        android:textStyle="bold" 
+                        android:singleLine="false">"
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txt_info"
+                        style="@style/ItemDetalhes"
+                        android:layout_width="fill_parent"
+                        android:layout_height="81dp"
+                        android:text="info" >
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

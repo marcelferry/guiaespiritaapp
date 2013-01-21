@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <include layout="@layout/custom_title_bar" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:cacheColorHint="#00000000"
+        android:paddingTop="80dip"
+        android:src="@drawable/logo_mythe_280" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="50dip" >
+
+        <TableRow >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:cacheColorHint="#00000000"
+                android:padding="5dip"
+                android:src="@drawable/logo_mythe_140" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="Todos os direitos reservados."
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/emp_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/textView1"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:text="©2011 - Mythe Tecnologia"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/app_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/emp_name"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:text="Guia Espírita 1.5"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_span="2"
+                android:text="Ajude-nos a fazer esse programa melhor. Envie-nos suas sugestões e críticas para:" />
+        </TableRow>
+
+        <TableRow >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:autoLink="email"
+                android:gravity="center"
+                android:text="contato@mythe.com.br" />
+        </TableRow>
+
+    </TableLayout>
+
+</FrameLayout>

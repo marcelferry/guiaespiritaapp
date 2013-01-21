@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff" >
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/home_title_bar" />
+
+    <LinearLayout
+        android:id="@+id/adMob"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/ControlButtons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/adMob"
+        android:orientation="horizontal"
+        android:padding="20sp" >
+
+        <Button
+            android:id="@+id/OkDialog"
+            style="@style/ButtonTextMedioWrap"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_gray"
+            android:text="@android:string/ok" />
+
+        <Button
+            android:id="@+id/CancelDialog"
+            style="@style/ButtonTextMedioWrap"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_gray"
+            android:text="@android:string/cancel" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/ContactScroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ControlButtons"
+        android:layout_below="@id/header" >
+
+        <LinearLayout
+            android:id="@+id/widget98"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundcorners_white" >
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/lbEndereco"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Endereço:" >
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/txt_endereco"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/ttEndereco"
+                        android:inputType="textCapWords"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="14sp" 
+                        android:maxLength="100">
+                    </EditText>
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1sp"
+                    android:background="#cccccc" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/lbBairrro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lblBairro">
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/txt_bairro"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/ttBairro"
+                        android:inputType="textCapWords"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="14sp"
+                        android:maxLength="50">
+                    </EditText>
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1sp"
+                    android:background="#cccccc"
+                    android:visibility="gone" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/lbCEP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lblCep"
+                        android:visibility="gone" >
+                    </TextView>
+
+                    <br.com.mythe.droid.common.view.CepEditText
+                        android:id="@+id/txt_cep"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/ttCep"
+                        android:inputType="number"
+                        android:text=""
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+                </TableRow>
+                
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1sp"
+                    android:background="#cccccc" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/lbPais"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lblPais" >
+                    </TextView>
+
+                    <Spinner
+                        android:id="@+id/spPais"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:prompt="@string/paises" >
+                    </Spinner>
+                </TableRow>
+                                
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1sp"
+                    android:background="#cccccc" />
+
+                <TableRow
+                    android:id="@+id/linha_estado"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/lbEstado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lblEstado" >
+                    </TextView>
+
+                    <Spinner
+                        android:id="@+id/spEstado"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:prompt="@string/estados" >
+                    </Spinner>
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/linha_provincia"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/lbProvince"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lblEstado" >
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/txt_province"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/ttEstado"
+                        android:inputType="textCapWords"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="14sp" 
+                        android:maxLength="50">
+                    </EditText>
+                </TableRow>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1sp"
+                    android:background="#cccccc" />
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/lbCidade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lblCidade" >
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/txt_cidade"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="@string/ttCidade"
+                        android:inputType="textCapWords"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="14sp" 
+                        android:maxLength="30">
+                    </EditText>
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

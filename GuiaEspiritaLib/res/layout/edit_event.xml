@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/custom_title_bar" />
+
+    <LinearLayout
+        android:id="@+id/edit_event_contents"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/previous_activity_bar"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/EventText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Event"
+            android:textStyle="bold" />
+
+        <AutoCompleteTextView
+            android:id="@+id/editEventName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/EventText" />
+
+        <TextView
+            android:id="@+id/locationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Location"
+            android:textStyle="bold" />
+
+        <AutoCompleteTextView
+            android:id="@+id/editLocation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <CheckBox
+            android:id="@+id/cbDiaInteiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dia Inteiro"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/startTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cbDiaInteiro"
+            android:text="@string/startDate"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/setStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawableTop="@drawable/calendario" >
+            </Button>
+
+            <TextView
+                android:id="@+id/startDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/defaultStartTime" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/startTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/defaultStartTime" >
+            </TextView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/stopTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editLocation"
+            android:text="@string/endTime"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/setEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:drawableTop="@drawable/calendario"  >
+            </Button>
+
+            <TextView
+                android:id="@+id/stopDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/defaultStartTime" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/stopTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/defaultStartTime" >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/previous_activity_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:clickable="false"
+        android:gravity="left|center_vertical"
+        android:text="@string/previousActivityText" />
+
+</LinearLayout>

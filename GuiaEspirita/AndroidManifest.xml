@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.mythe.droid.ge"
+    android:versionCode="8"
+    android:versionName="1.5.2" >
+
+    <uses-sdk android:minSdkVersion="4" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    
+    <application
+        android:icon="@drawable/guia"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.D1" >
+        <uses-library android:name="com.google.android.maps" />
+
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.SplashScreenActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.HomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.common.fb.PostMessage"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.common.fb.FacebookSample"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.AboutActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.ListaPaisesActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.ListaEstadosActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.ListaCidadesActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.ListaItensActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.ViewInMapActivity"
+            android:label="@string/app_name"
+            android:theme="@style/CustomTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.MapaProximosActivity"
+            android:label="@string/app_name"
+            android:theme="@style/CustomTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.ItemDetalheActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/lb_detalhes" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.NovoItemActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/lb_detalhes"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
+        </activity>
+        <activity
+   			 android:name="br.com.mythe.droid.gelib.activities.ItemCheckinActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/lb_detalhes" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
+        </activity>
+        <activity
+   			 android:name="br.com.mythe.droid.gelib.activities.Preferences"
+            android:label="@string/lb_detalhes"
+            android:theme="@style/CustomTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.ListaFavoritosActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.ListaProximosActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
+        </activity>
+        <activity
+    		android:name="br.com.mythe.droid.gelib.activities.SearchGuiaActivity"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.gelib.events.EditEvent"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.gelib.events.ListEvents"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.gelib.events.Settings"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity android:name="br.com.mythe.droid.gelib.events.TimeDatePicker" >
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.gelib.events.DatePicker"
+            android:launchMode="singleTask" >
+        </activity>
+
+        <!-- Entry for LoginActivity.class -->
+        <activity
+            android:name="br.com.mythe.droid.gelib.login.LoginActivity"
+            android:label="Efetuar Login"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Entry for RegisterActivity.class -->
+        <activity
+            android:name="br.com.mythe.droid.gelib.login.RegisterActivity"
+            android:label="Nova Conta"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <!-- Entry for NovoItemEnderecoDialog.class -->
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.NovoItemEnderecoDialog"
+            android:label="Endereço"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <!-- Entry for NovoItemEnderecoDialog.class -->
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.NovoItemContatoDialog"
+            android:label="Contatos"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <!-- Entry for NovoItemInfoDialog.class -->
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.NovoItemInfoDialog"
+            android:label="Informações"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <!-- Entry for NovoItemInfoDialog.class -->
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.ItemDicasActivity"
+            android:label="Nova Dica"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <!-- android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" -->
+        <activity
+            android:name="com.google.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation" />
+        <provider
+            android:name="br.com.mythe.droid.gelib.provider.CasasEspiritasProviderFull"
+            android:authorities="br.com.mythe.droid.gelib.provider.CasasEspiritasProviderFull" />
+        <provider
+            android:name="br.com.mythe.droid.gelib.provider.SuggestionProviderFull"
+            android:authorities="br.com.mythe.droid.gelib.provider.SuggestionProviderFull" />
+    </application>
+    
+
+</manifest>

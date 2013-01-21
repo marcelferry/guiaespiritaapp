@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/header"
+        android:layout_alignParentTop="true"
+        layout="@layout/custom_title_bar" />
+
+    <LinearLayout
+        android:id="@+id/adMob"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal" />
+
+    <ScrollView
+        android:id="@+id/widget71"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/adMob"
+        android:layout_below="@id/header" >
+
+        <LinearLayout
+            android:id="@+id/widget98"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundcorners_white"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" >
+
+                        <TextView
+                            android:id="@+id/lbNome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lblNome" >
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/txt_entidade"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="@string/ttNomeEntidade"
+                            android:inputType="textCapWords"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textSize="14sp" 
+                            android:maxLength="256">
+                        </EditText>
+                    </TableRow>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1sp"
+                        android:background="#cccccc" />
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" >
+
+                        <TextView
+                            android:id="@+id/lbTipo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lblTipo" >
+                        </TextView>
+
+                        <Spinner
+                            android:id="@+id/spTipo"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:prompt="@string/tipo_items"
+                            android:textSize="14sp" >
+                        </Spinner>
+                    </TableRow>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1sp"
+                        android:background="#cccccc" />
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" >
+
+                        <TextView
+                            android:id="@+id/lbEndereco"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lblEndereco" >
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/txt_endereco"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:editable="false"
+                            android:focusable="false"
+        					android:focusableInTouchMode="false"	                            
+                            android:hint="@string/ttAddEndereco"
+                            android:text=""
+                            android:textSize="14sp" >
+                        </EditText>
+                    </TableRow>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1sp"
+                        android:background="#cccccc" />
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" >
+
+                        <TextView
+                            android:id="@+id/lbTelefone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lblContatos" >
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/txt_telefone"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:editable="false"
+                            android:hint="@string/ttAddContato"
+                            android:focusable="false"
+        					android:focusableInTouchMode="false"                           
+                            android:text=""
+                            android:textSize="14sp" />
+                    </TableRow>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1sp"
+                        android:background="#cccccc" />
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp" >
+
+                        <TextView
+                            android:id="@+id/lbInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lblObs" >
+                        </TextView>
+
+                        <EditText
+                            android:id="@+id/txt_info"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:editable="false"
+                            android:hint="@string/ttAddObs"
+                            android:focusable="false"
+					        android:focusableInTouchMode="false"                          
+                            android:text=""
+                            android:textSize="14sp" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="5sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.google.android.maps.MapView
+                    android:id="@+id/mapa"
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    android:apiKey="0U5I0dVmmoNhn5KXxVzcXxZQrNtiWVK5tkVMr1Q"
+                    android:background="@drawable/roundcorners_white"
+                    android:clickable="true"
+                    android:enabled="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp" >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_gray"
+                    android:onClick="onClickSave"
+                    android:text="@string/btnSalvar"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

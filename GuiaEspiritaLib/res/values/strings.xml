@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">Guia Espírita</string>
+    <string name="lb_detalhes">Detalhes da Entidade</string>
+    <string name="title_search">Busca</string>
+    <string name="search_hint">Buscando</string>
+    <string name="loading_search">Localizando&#8230;</string>
+    <string name="menu_about">Sobre&#8230;</string>
+    <string name="menu_search">Buscar</string>
+    <string name="menu_preferences">Preferências</string>
+    <string name="about_text">Versão: %1$s</string>
+    <string name="about_player_name">Guia Espírita\n© 2011 Mythe Tecnologia Ltda.</string>
+    <string name="about_code_link">Obrigado por adiquirar nosso programa!</string>
+    <string name="about_bugs_link">Home: http://guiaespirita.mythe.com.br</string>
+    <string name="description_logo">Demo</string>
+    <string name="description_about">About</string>
+    <string name="description_home">Home</string>
+    <string name="description_search">Search</string>
+    
+    <!-- Menu -->
+    <string name="title_lista_item">Casas</string>
+    <string name="title_itens_favoritos">Favoritos</string>
+    <string name="title_itens_proximos">Locais Próximos</string>
+    <string name="title_mapa_proximos">Mapa</string>
+    <string name="title_preferences">Preferências</string>
+    <string name="title_about">Sobre</string>
+    <string name="title_country">Outros Países</string>
+    <string name="title_events">Eventos</string>
+    <string name="title_naologado">Exclusivo para Usuários</string>
+    
+    <!-- Eventos -->
+    <string name="Event">Evento</string>
+    <string name="confirm">Confirm</string>
+    <string name="Location">Local</string>
+    <string name="startTime">Horas:</string>
+    <string name="endTime">Horas:</string>
+    <string name="startDate">Data Início:</string>
+    <string name="endDate">Data Término:</string>
+    <string name="timeText">Hora:</string>
+    <string name="dateText">Data:</string>
+    <string name="Set">Aceitar</string>
+    <string name="nextActivity">Next Activity</string>
+    <string name="stopTracking">Stop Tracking</string>
+    <string name="defaultStartTime">&amp;lt; N/A &amp;gt;</string>
+    <string name="previousActivityText">Previous Activity: </string>
+    <string name="toolbarNotTracking">Not Currently Tracking</string>
+    <string name="toolbarTracking">Now Tracking</string>
+    <string name="previousActivityDefault">None</string>
+    <string name="isTracking">isTracking</string>
+    <string name="activityListHeader">All Activities</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancelar</string>
+    <string name="TextoCampo">campo</string>    
+    <string name="espEntidades">&#160;entidades</string>
+    <string name="ImgTpEntidade">Imagem Tipo Casa</string>
+    
+    <!--  botoes -->
+    <string name="btnContatos">Contatos</string>    
+    <string name="btnDicas">Dicas</string>    
+    <string name="btnEventos">Eventos</string>
+    <string name="btnCheckin">Checkin</string> 
+    <string name="btnRegistrar">Registrar-se</string> 
+    <string name="btnLogin">Login</string> 
+    <string name="btnSalvar">Salvar</string> 
+    
+    
+    <!-- Rotulos -->
+    <string name="titleDicas">Dicas</string>
+    <string name="titleEventos">Eventos</string>
+    <string name="titleContatos">Contatos</string>
+    <string name="lblUsuario">Usuário (E-mail):&#160;</string>  
+    <string name="lblNomeCompleto">Nome Completo:&#160;</string>
+    <string name="lblNome">Nome:&#160;</string>
+    <string name="lblSenha">Senha:&#160;</string>  
+    <string name="lblTelefone">Telefone:&#160;</string>
+    <string name="lblWebSite">Site:&#160;</string>  
+    <string name="lblEmail">E-mail:&#160;</string>  
+    <string name="lblInfo">Informações:&#160;</string>
+    <string name="lblEstado">Estado:&#160;</string>
+    <string name="lblPais">País:&#160;</string>
+    <string name="lblCidade">Cidade:&#160;</string>
+    <string name="lblEndereco">Endereço:&#160;</string>
+    <string name="lblBairro">Bairro:&#160;</string>
+    <string name="lblCep">CEP:&#160;</string>
+    <string name="lblTipo">Tipo:&#160;</string>
+    <string name="lblContatos">Contatos:&#160;</string>
+    <string name="lblObs">Observações:&#160;</string>
+    
+    
+    
+    <!-- Hints -->
+    <string name="ttEndereco">Endereço&#8230;</string>
+    <string name="ttBairro">Bairro&#8230;</string>
+    <string name="ttCep">CEP&#8230;</string>
+    <string name="ttCidade">Cidade&#8230;</string>
+    <string name="ttEstado">Estado&#8230;</string>
+    <string name="ttNomeEntidade">Nome da Entidade&#8230;</string>
+    <string name="ttTipo">Tipo da Entidade&#8230;</string>
+    <string name="ttAddEndereco">Adicionar Endereço&#8230;</string>
+    <string name="ttAddContato">Adicionar Contato&#8230;</string>
+    <string name="ttAddObs">Adicionar Observações&#8230;</string>
+    
+    
+    <!-- Mensagens -->
+    <string name="aguarde">Aguarde&#8230;</string>
+    <string name="semDicas">Não há dicas para este local.</string>    
+    <string name="semEventos">Não há eventos agendados.</string>    
+    <string name="semContatos">Não há contatos ou informações cadastrados.</string>    
+    <string name="registrese">Novo no Guia? Registre-se aqui</string>
+    <string name="noLogin">Não exibir mais esta tela.</string>
+    <string name="msgNaoLogado">Essa função esta disponível apenas para usuários registrados. Deseja fazer o login agora?</string>
+    <string name="textoregistro">O Registro e Login não são obrigatórios. Caso não queira realizá-lo basta marcar a opção abaixo. Algumas funções estão disponíveis apenas para usuários registrados.</string>
+    <string name="erro_conexao_indisponivel">Conexão indisponível, por favor ative sua rede móvel ou Wifi</string>
+    
+</resources>
