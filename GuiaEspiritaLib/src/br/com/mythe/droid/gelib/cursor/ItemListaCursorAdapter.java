@@ -1,5 +1,7 @@
 package br.com.mythe.droid.gelib.cursor;
 
+import org.jredfoot.sophielib.util.MapUtils;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.location.Location;
@@ -10,7 +12,6 @@ import android.widget.CursorAdapter;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import br.com.mythe.droid.common.util.MapUtils;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.database.objects.Casas;
 

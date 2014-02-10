@@ -40,7 +40,9 @@
             android:layout_width="fill_parent"
             android:layout_height="90dip"
             android:layout_alignParentBottom="true"
-            android:background="@layout/footer_repeat" >
+            android:background="@layout/footer_repeat" 
+            android:orientation="vertical">
+           
         </LinearLayout>
         <!-- Footer Ends -->
 
@@ -94,6 +96,20 @@
 
             <EditText
                 android:id="@+id/reg_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:password="true"
+                android:singleLine="true" />
+            
+             <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirme:"
+                android:textColor="#372c24" />
+            
+            <EditText
+                android:id="@+id/reg_password_confirme"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dip"

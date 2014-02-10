@@ -129,7 +129,7 @@
                             android:visibility="gone" >
                         </TextView>
 
-                        <br.com.mythe.droid.common.view.CepEditText
+                        <org.jredfoot.sophielib.view.CepEditText
                             android:id="@+id/txt_cep"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"

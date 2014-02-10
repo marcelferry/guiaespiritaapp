@@ -11,6 +11,7 @@
         layout="@layout/home_title_bar" />
 
     <LinearLayout
+        android:orientation="vertical"
         android:id="@+id/adMob"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

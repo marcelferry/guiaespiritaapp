@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.microedition.khronos.opengles.GL;
 
+import org.jredfoot.sophielib.util.Ponto;
+
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -25,7 +27,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
-import br.com.mythe.droid.common.util.Ponto;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.activities.dashboard.MapaActivity;
 import br.com.mythe.droid.gelib.database.objects.Casas;

@@ -1,5 +1,8 @@
 package br.com.mythe.droid.gelib.activities;
 
+import org.jredfoot.sophielib.util.AdMobsUtil;
+import org.jredfoot.sophielib.util.NetUtils;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -9,8 +12,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
-import br.com.mythe.droid.common.util.AdMobsUtil;
-import br.com.mythe.droid.common.util.NetUtils;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.activities.dashboard.ListaActivity;
 import br.com.mythe.droid.gelib.cursor.EstadosListaCursor;

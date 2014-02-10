@@ -33,7 +33,7 @@
                         android:text="Telefone:" >
                     </TextView>
 
-                    <br.com.mythe.droid.common.view.PhoneEditText
+                    <org.jredfoot.sophielib.view.PhoneEditText
                         android:id="@+id/txt_telefone"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"

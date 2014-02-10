@@ -3,6 +3,8 @@ package br.com.mythe.droid.gelib.login;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.jredfoot.sophielib.util.NetUtils;
+import org.jredfoot.sophielib.util.Utils;
 import org.w3c.dom.Document;
 
 import android.app.Activity;
@@ -18,8 +20,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import br.com.mythe.droid.common.util.NetUtils;
-import br.com.mythe.droid.common.util.Utils;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.activities.HomeActivity;
 import br.com.mythe.droid.gelib.constants.GEConst;
@@ -43,11 +43,18 @@ public class RegisterActivity extends Activity {
 				EditText campoNome = (EditText) findViewById(R.id.reg_fullname);
 				EditText campoUsuario = (EditText) findViewById(R.id.reg_email);
 				EditText campoSenha = (EditText) findViewById(R.id.reg_password);
+				EditText campoConfirma = (EditText) findViewById(R.id.reg_password_confirme);
+				
 				
 				String nome = campoNome.getText().toString();
 				String usuario = campoUsuario.getText().toString();
 				String senha = campoSenha.getText().toString();
-				if(!"".equals(nome) && !"".equals(usuario) && !"".equals(senha) ){
+				String confirmacao = campoConfirma.getText().toString();
+				
+				if(!"".equals(nome) && !"".equals(usuario) && !"".equals(senha) && !"".equals(confirmacao)){
+					if(!confirmacao.equals(senha)){
+						Utils.alertDialog(RegisterActivity.this, "Senhas não conferem!", R.string.app_name);
+					}
 					if(Utils.validarEmail(usuario)){
 						new RegisterTask(RegisterActivity.this, nome, usuario, senha).execute();
 					} else {

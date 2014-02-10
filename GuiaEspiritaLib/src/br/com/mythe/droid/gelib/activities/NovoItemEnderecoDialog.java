@@ -1,5 +1,7 @@
 package br.com.mythe.droid.gelib.activities;
 
+import org.jredfoot.sophielib.util.Utils;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,16 +11,10 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TableRow;
-import br.com.mythe.droid.common.util.Utils;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.activities.dashboard.DashboardActivity;
-
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
 
 public class NovoItemEnderecoDialog extends DashboardActivity {
 

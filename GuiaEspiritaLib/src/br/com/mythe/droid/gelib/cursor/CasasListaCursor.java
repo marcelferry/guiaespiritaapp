@@ -1,5 +1,7 @@
 package br.com.mythe.droid.gelib.cursor;
 
+import org.jredfoot.sophielib.util.MapUtils;
+
 import android.content.Context;
 import android.database.Cursor;
 import android.location.Location;
@@ -8,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
-import br.com.mythe.droid.common.util.MapUtils;
 import br.com.mythe.droid.gelib.R;
 
 public class CasasListaCursor extends SimpleCursorAdapter {

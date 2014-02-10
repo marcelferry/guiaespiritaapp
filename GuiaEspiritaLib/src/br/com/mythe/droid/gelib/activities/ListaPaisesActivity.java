@@ -1,5 +1,7 @@
 package br.com.mythe.droid.gelib.activities;
 
+import org.jredfoot.sophielib.util.AdMobsUtil;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -11,7 +13,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
-import br.com.mythe.droid.common.util.AdMobsUtil;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.activities.dashboard.ListaActivity;
 import br.com.mythe.droid.gelib.database.objects.Casas;

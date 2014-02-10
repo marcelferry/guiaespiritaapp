@@ -1,12 +1,13 @@
 package br.com.mythe.droid.gelib.activities;
 
+import org.jredfoot.sophielib.util.AdMobsUtil;
+
 import android.app.AlertDialog;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.ListView;
-import br.com.mythe.droid.common.util.AdMobsUtil;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.activities.dashboard.ListaActivity;
 import br.com.mythe.droid.gelib.cursor.ItemListaCursorAdapter;

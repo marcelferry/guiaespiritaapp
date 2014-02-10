@@ -3,6 +3,8 @@ package br.com.mythe.droid.gelib.activities;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.jredfoot.sophielib.util.AdMobsUtil;
+import org.jredfoot.sophielib.util.NetUtils;
 import org.w3c.dom.Document;
 
 import android.app.AlertDialog;
@@ -16,8 +18,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import br.com.mythe.droid.common.util.AdMobsUtil;
-import br.com.mythe.droid.common.util.NetUtils;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.activities.dashboard.DashboardActivity;
 import br.com.mythe.droid.gelib.constants.GEConst;

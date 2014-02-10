@@ -3,6 +3,8 @@ package br.com.mythe.droid.gelib.activities;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.jredfoot.sophielib.exception.NegocioException;
+import org.jredfoot.sophielib.util.NetUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -23,12 +25,11 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
-import br.com.mythe.droid.common.util.NetUtils;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.constants.GEConst;
 import br.com.mythe.droid.gelib.database.GuiaEspiritaDB;
 import br.com.mythe.droid.gelib.database.objects.Casas;
-import br.com.mythe.droid.gelib.exception.GuiaException;
+import br.com.mythe.droid.gelib.login.LoginActivity;
 import br.com.mythe.droid.gelib.provider.CasasEspiritasProvider;
 
 public class Preferences extends PreferenceActivity {
@@ -130,6 +131,9 @@ public class Preferences extends PreferenceActivity {
 			    else 
 			    {  			    
 			    	//Toast.makeText(getApplicationContext(), "CB: " + "false", Toast.LENGTH_SHORT).show();
+			    	startActivity(new Intent(getApplicationContext(),
+							LoginActivity.class));	
+			    	finish();
 			    }
 			    return true;
 			}
@@ -158,7 +162,7 @@ public class Preferences extends PreferenceActivity {
 	private void carregarDadosInternet(boolean reset) {
 		try {
 			carregaCasasEspiritasNovo(reset);
-		} catch (GuiaException e) {
+		} catch (NegocioException e) {
 			e.printStackTrace();
 			Log.e("Guia Espirita", e.getMessage());
 			Message m = Message.obtain(mHandler, NETWOTK_ERROR_WAIT);
@@ -168,7 +172,7 @@ public class Preferences extends PreferenceActivity {
 	}
 
 	
-	private void carregaCasasEspiritas(boolean reset) throws GuiaException {
+	private void carregaCasasEspiritas(boolean reset) throws NegocioException {
 		
 		Document doc;
 		
@@ -234,7 +238,7 @@ public class Preferences extends PreferenceActivity {
 
 	/** Em desenvolvimento 
 	 */
-	private void carregaCasasEspiritasNovo(boolean reset) throws GuiaException {
+	private void carregaCasasEspiritasNovo(boolean reset) throws NegocioException {
 		
 		Document doc;
 		

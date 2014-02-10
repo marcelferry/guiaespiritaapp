@@ -1,5 +1,11 @@
 package br.com.mythe.droid.gelib.activities.dashboard;
 
+import org.jredfoot.sophielib.transacao.Transacao;
+import org.jredfoot.sophielib.transacao.TransacaoTask;
+import org.jredfoot.sophielib.util.MapUtils;
+import org.jredfoot.sophielib.util.NetUtils;
+import org.jredfoot.sophielib.util.Utils;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -13,11 +19,6 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
-import br.com.mythe.droid.common.transacao.Transacao;
-import br.com.mythe.droid.common.transacao.TransacaoTask;
-import br.com.mythe.droid.common.util.MapUtils;
-import br.com.mythe.droid.common.util.NetUtils;
-import br.com.mythe.droid.common.util.Utils;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.activities.AboutActivity;
 import br.com.mythe.droid.gelib.activities.HomeActivity;

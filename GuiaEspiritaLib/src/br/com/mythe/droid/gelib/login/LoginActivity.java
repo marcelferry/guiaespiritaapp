@@ -3,6 +3,8 @@ package br.com.mythe.droid.gelib.login;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.jredfoot.sophielib.util.NetUtils;
+import org.jredfoot.sophielib.util.Utils;
 import org.w3c.dom.Document;
 
 import android.app.Activity;
@@ -19,8 +21,6 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import br.com.mythe.droid.common.util.NetUtils;
-import br.com.mythe.droid.common.util.Utils;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.activities.HomeActivity;
 import br.com.mythe.droid.gelib.constants.GEConst;

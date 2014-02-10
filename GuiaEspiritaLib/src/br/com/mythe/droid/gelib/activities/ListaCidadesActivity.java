@@ -3,6 +3,10 @@ package br.com.mythe.droid.gelib.activities;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.jredfoot.sophielib.util.AdMobsUtil;
+import org.jredfoot.sophielib.util.NetUtils;
+import org.jredfoot.sophielib.util.Utils;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
@@ -13,9 +17,6 @@ import android.view.View.OnClickListener;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.SimpleCursorAdapter;
-import br.com.mythe.droid.common.util.AdMobsUtil;
-import br.com.mythe.droid.common.util.NetUtils;
-import br.com.mythe.droid.common.util.Utils;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.activities.dashboard.ListaActivity;
 import br.com.mythe.droid.gelib.database.objects.Casas;
@@ -57,7 +58,7 @@ public class ListaCidadesActivity extends ListaActivity {
 
 		setTitleFromActivityLabel(R.id.title_text);
 
-		String selection = null;
+		String selection = "";
 		String selArgs[] = null;
 		List<String> selArgsL = new ArrayList<String>();
 
@@ -70,7 +71,7 @@ public class ListaCidadesActivity extends ListaActivity {
 			pais = "Brasil";
 		}
 
-		if (selection != null) {
+		if (!selection.equals("")) {
 			selection += " and ";
 		}
 

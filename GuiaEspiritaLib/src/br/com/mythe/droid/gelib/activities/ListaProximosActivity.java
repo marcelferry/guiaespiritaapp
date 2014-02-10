@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.jredfoot.sophielib.util.AdMobsUtil;
+import org.jredfoot.sophielib.util.MapUtils;
+import org.jredfoot.sophielib.util.NetUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -28,9 +31,6 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
 import android.widget.Toast;
-import br.com.mythe.droid.common.util.AdMobsUtil;
-import br.com.mythe.droid.common.util.MapUtils;
-import br.com.mythe.droid.common.util.NetUtils;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.activities.dashboard.ListaActivity;
 import br.com.mythe.droid.gelib.adapter.CasasAdapter;

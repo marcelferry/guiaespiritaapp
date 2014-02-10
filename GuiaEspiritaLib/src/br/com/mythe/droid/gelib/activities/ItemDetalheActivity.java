@@ -1,5 +1,7 @@
 package br.com.mythe.droid.gelib.activities;
 
+import org.jredfoot.sophielib.util.AdMobsUtil;
+
 import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -17,7 +19,6 @@ import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.ToggleButton;
-import br.com.mythe.droid.common.util.AdMobsUtil;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.activities.dashboard.DashboardActivity;
 import br.com.mythe.droid.gelib.database.GuiaEspiritaDB;

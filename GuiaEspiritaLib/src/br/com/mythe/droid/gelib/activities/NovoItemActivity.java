@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.jredfoot.sophielib.transacao.Transacao;
+import org.jredfoot.sophielib.util.NetUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -29,20 +31,14 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
-import br.com.mythe.droid.common.transacao.Transacao;
-import br.com.mythe.droid.common.util.NetUtils;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.activities.dashboard.MapaActivity;
 import br.com.mythe.droid.gelib.constants.GEConst;
 import br.com.mythe.droid.gelib.database.objects.Casas;
 import br.com.mythe.droid.gelib.provider.CasasEspiritasProvider;
 
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.ItemizedOverlay;
 import com.google.android.maps.MapView;

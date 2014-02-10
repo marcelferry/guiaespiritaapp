@@ -1,20 +1,16 @@
 package br.com.mythe.droid.gelib.activities;
 
+import org.jredfoot.sophielib.util.Utils;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Toast;
-import br.com.mythe.droid.common.util.Utils;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.activities.dashboard.DashboardActivity;
-
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
 
 public class NovoItemContatoDialog extends DashboardActivity {
 

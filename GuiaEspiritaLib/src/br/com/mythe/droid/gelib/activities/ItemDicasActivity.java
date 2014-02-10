@@ -3,6 +3,7 @@ package br.com.mythe.droid.gelib.activities;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.jredfoot.sophielib.util.NetUtils;
 import org.w3c.dom.Document;
 
 import android.app.AlertDialog;
@@ -18,12 +19,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import br.com.mythe.droid.common.util.NetUtils;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.activities.dashboard.DashboardActivity;
 import br.com.mythe.droid.gelib.constants.GEConst;
 import br.com.mythe.droid.gelib.database.objects.Casas;
-import br.com.mythe.droid.gelib.exception.GuiaException;
 import br.com.mythe.droid.gelib.provider.CasasEspiritasProvider;
 
 
@@ -152,7 +151,7 @@ public class ItemDicasActivity extends DashboardActivity {
 			
 			finish();
 			
-		} catch (GuiaException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

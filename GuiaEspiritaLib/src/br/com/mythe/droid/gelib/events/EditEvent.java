@@ -5,6 +5,8 @@ import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.jredfoot.sophielib.view.DateTimePicker;
+
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
@@ -21,7 +23,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import br.com.mythe.droid.common.view.DateTimePicker;
 import br.com.mythe.droid.gelib.R;
 
 public class EditEvent extends Activity {

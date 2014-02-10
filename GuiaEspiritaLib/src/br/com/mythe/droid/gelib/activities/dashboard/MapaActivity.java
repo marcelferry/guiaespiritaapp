@@ -1,5 +1,10 @@
 package br.com.mythe.droid.gelib.activities.dashboard;
 
+import org.jredfoot.sophielib.transacao.Transacao;
+import org.jredfoot.sophielib.transacao.TransacaoTask;
+import org.jredfoot.sophielib.util.NetUtils;
+import org.jredfoot.sophielib.util.Utils;
+
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -8,12 +13,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.animation.AnimationUtils;
 import android.widget.Toast;
-import br.com.mythe.droid.common.transacao.Transacao;
-import br.com.mythe.droid.common.transacao.TransacaoTask;
-import br.com.mythe.droid.common.util.NetUtils;
-import br.com.mythe.droid.common.util.Utils;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.activities.AboutActivity;
 import br.com.mythe.droid.gelib.activities.HomeActivity;
