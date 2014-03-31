@@ -1,5 +1,8 @@
 package br.com.mythe.droid.gelib.activities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.jredfoot.sophielib.util.AdMobsUtil;
 import org.jredfoot.sophielib.util.NetUtils;
 
@@ -97,9 +100,43 @@ public class ListaItensActivity extends ListaActivity implements
 
 		getListView().addFooterView(view);
 
-		String selection = Casas.CIDADE + " like ?";
+		
+		
+		String selection = "";
+		String selArgs[] = null;
+		List<String> selArgsL = new ArrayList<String>();
+
+		if (estado != null) {
+			selection = "lower(" + Casas.ESTADO + ") like lower(?)";
+			selArgsL.add(estado);
+		}
+
+		if (pais == null) {
+			pais = "Brasil";
+		}
+
+		if (!selection.equals("")) {
+			selection += " and ";
+		}
+
+		selection += "lower(" + Casas.PAIS + ") like lower(?)";
+		selArgsL.add(pais);
+		
+		if (!selection.equals("")) {
+			selection += " and ";
+		}
+		
+		selection += "lower(" + Casas.CIDADE + ") like lower( ? )";
+		
+		selArgsL.add(cidade);
+
+		selArgs = new String[selArgsL.size()];
+
+		selArgs = selArgsL.toArray(selArgs);
+		
+		
 		Cursor cur = managedQuery(CasasEspiritasProvider.getContentUri(isLite() , Casas.CONTENT ), projection, selection,
-				new String[] { cidade }, Casas.NOME + " ASC");
+				selArgs, Casas.NOME + " ASC");
 		//setListAdapter(new CasasListaCursor(this, R.layout.lista_casas_item,
 		//		cur, displayFields, displayViews));
 		

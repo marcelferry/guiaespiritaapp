@@ -3,6 +3,7 @@
     <string name="estados">Selecione um estado</string>
     <string-array name="estados">
         <item>Acre</item>
+        <item>Alagoas</item>
         <item>Amazonas</item>
         <item>Amapá</item>
         <item>Bahia</item>
