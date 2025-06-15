@@ -5,24 +5,21 @@
     android:background="#ffffffff"
     android:orientation="vertical" >
 
-    <include
-        android:id="@+id/header"
-        android:layout_alignParentTop="true"
-        layout="@layout/custom_title_bar" />
-
     <LinearLayout
         android:id="@+id/adMob"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal" 
+        android:orientation="horizontal"
+        android:background="@color/adbackground"/>
 
     <ScrollView
         android:id="@+id/widget71"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_above="@id/adMob"
-        android:layout_below="@id/header" >
+        android:layout_alignParentTop="true">
 
         <LinearLayout
             android:id="@+id/widget98"
@@ -44,7 +41,10 @@
                     <TableRow
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp" >
+                        android:paddingTop="5dp"  
+                        android:paddingBottom="5dp"  
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
 
                         <TextView
                             android:id="@+id/lbNome"
@@ -75,7 +75,10 @@
                     <TableRow
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp" >
+                        android:paddingTop="5dp"  
+                        android:paddingBottom="5dp"  
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
 
                         <TextView
                             android:id="@+id/lbTipo"
@@ -104,7 +107,10 @@
                     <TableRow
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp" >
+                        android:paddingTop="5dp"  
+                        android:paddingBottom="5dp"  
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
 
                         <TextView
                             android:id="@+id/lbEndereco"
@@ -135,7 +141,10 @@
                     <TableRow
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp" >
+                        android:paddingTop="5dp"  
+                        android:paddingBottom="5dp"  
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
 
                         <TextView
                             android:id="@+id/lbTelefone"
@@ -165,7 +174,10 @@
                     <TableRow
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:padding="10dp" >
+                        android:paddingTop="5dp"  
+                        android:paddingBottom="5dp"  
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
 
                         <TextView
                             android:id="@+id/lbInfo"
@@ -198,28 +210,26 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
 
-                <com.google.android.maps.MapView
-                    android:id="@+id/mapa"
-                    android:layout_width="fill_parent"
-                    android:layout_height="200dp"
-                    android:apiKey="0U5I0dVmmoNhn5KXxVzcXxZQrNtiWVK5tkVMr1Q"
-                    android:background="@drawable/roundcorners_white"
-                    android:clickable="true"
-                    android:enabled="true" />
+                <fragment
+		            android:id="@+id/mapnewitem"
+		            android:name="com.google.android.gms.maps.SupportMapFragment"
+		            android:layout_width="match_parent"
+		            android:layout_height="200dp"/>
+                
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="20dp" >
+                android:padding="5dp" >
 
                 <Button
+                    android:id="@+id/btn_save"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/btn_gray"
-                    android:onClick="onClickSave"
                     android:text="@string/btnSalvar"
                     android:textColor="#ffffff"
                     android:textSize="14sp"

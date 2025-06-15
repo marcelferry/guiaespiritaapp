@@ -1,7 +1,12 @@
 package br.com.mythe.droid.gelib.database;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.content.Context;
 import android.database.Cursor;
+import android.graphics.BitmapFactory;
+import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.constants.DBConst;
 import br.com.mythe.droid.gelib.database.objects.Casas;
 import br.com.mythe.droid.gelib.database.objects.Favoritos;
@@ -106,8 +111,8 @@ public class GuiaEspiritaDB implements DBConst {
 				casa.endereco = c.getString(c.getColumnIndex(Casas.FONE));
 				casa.email = c.getString(c.getColumnIndex(Casas.EMAIL));
 				casa.site = c.getString(c.getColumnIndex(Casas.SITE));
-				casa.lat = new Long(c.getString(c.getColumnIndex(Casas.LAT)));
-				casa.lng = new Long(c.getString(c.getColumnIndex(Casas.LNG)));
+				casa.lat = c.getDouble(c.getColumnIndex(Casas.LAT));
+				casa.lng = c.getDouble(c.getColumnIndex(Casas.LNG));
 				casa.type = c.getString(c.getColumnIndex(Casas.TYPE));
 				casa.atualizado = c.getString(c
 						.getColumnIndex(Casas.ATUALIZADO));
@@ -118,6 +123,62 @@ public class GuiaEspiritaDB implements DBConst {
 			c.close();
 		}
 		return null;
+	}
+	
+	public static List<CasaVO> cursorToListaCasa(Cursor c, Context context) {
+		List<CasaVO> retorno = new ArrayList<CasaVO>();
+		if (c == null)
+			return null;
+		try {
+			if (c.moveToFirst()) {
+				while (c.isAfterLast() == false) 
+				{
+				
+					CasaVO casa = new CasaVO();
+					casa._id = new Long(c.getString(c
+							.getColumnIndex(Casas._ID)));
+					casa.id_casa = new Long(c.getString(c
+							.getColumnIndex(Casas.COD_CASA)));
+					casa.entidade = c.getString(c.getColumnIndex(Casas.NOME));
+					casa.info = c.getString(c.getColumnIndex(Casas.INFORMACOES));
+					casa.endereco = c.getString(c.getColumnIndex(Casas.ENDERECO));
+					casa.bairro = c.getString(c.getColumnIndex(Casas.BAIRRO));
+					casa.cidade = c.getString(c.getColumnIndex(Casas.CIDADE));
+					casa.estado = c.getString(c.getColumnIndex(Casas.ESTADO));
+					casa.cep = c.getString(c.getColumnIndex(Casas.CEP));
+					casa.fone = c.getString(c.getColumnIndex(Casas.FONE));
+					casa.email = c.getString(c.getColumnIndex(Casas.EMAIL));
+					casa.site = c.getString(c.getColumnIndex(Casas.SITE));
+					casa.lat = c.getDouble(c.getColumnIndex(Casas.LAT));
+					casa.lng = c.getDouble(c.getColumnIndex(Casas.LNG));
+					casa.type = c.getString(c.getColumnIndex(Casas.TYPE));
+					casa.atualizado = c.getString(c
+							.getColumnIndex(Casas.ATUALIZADO));
+					
+					String tipo = casa.type;
+					
+					if(tipo != null && tipo.equals("centro")){
+						casa.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.list_icon_entidade);
+					} else if(tipo != null && tipo.equals("escola")) {
+						casa.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.list_icon_escola);
+					} else if(tipo != null && tipo.equals("livraria")) {
+						casa.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.list_icon_livraria);
+					} else if(tipo != null && tipo.equals("cfas")) {
+						casa.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.list_icon_cfas);
+					} else if(tipo != null && tipo.equals("assistencia")) {
+						casa.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.list_icon_assistencia);
+					} else {
+						casa.image = BitmapFactory.decodeResource(context.getResources(), R.drawable.list_no_image);
+					}
+				
+					retorno.add( casa );
+			    	c.moveToNext();
+				}
+			}
+		} finally {
+			c.close();
+		}
+		return retorno;
 	}
 
 	public static FavoritoVO cursorToFavorito(Cursor c) {

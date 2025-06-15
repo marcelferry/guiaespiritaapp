@@ -10,10 +10,6 @@ import android.widget.LinearLayout;
 import br.com.mythe.droid.gelib.R;
 import br.com.mythe.droid.gelib.activities.dashboard.DashboardActivity;
 
-import com.google.ads.AdRequest;
-import com.google.ads.AdSize;
-import com.google.ads.AdView;
-
 public class NovoItemInfoDialog extends DashboardActivity {
 
 	// Variaveis

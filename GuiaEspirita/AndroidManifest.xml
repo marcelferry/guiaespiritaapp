@@ -4,20 +4,38 @@
     android:versionCode="10"
     android:versionName="1.5.4" >
 
-    <uses-sdk android:minSdkVersion="4" />
+    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="19"/>
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<!-- Creating Permission to receive Google Maps -->
+	<permission
+	    android:name="com.arshad.map.permission.MAPS_RECEIVE"
+	    android:protectionLevel="signature" />
+	
+	<!-- Permission to receive Google Maps -->
+	<uses-permission android:name="com.arshad.map.permission.MAPS_RECEIVE" />
+	
+	<!-- Permission to read Google Services -->
+	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+	<!-- The following two permissions are not required to use
+	     Google Maps Android API v2, but are recommended. -->
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     
     <application
+        android:name="br.com.mythe.droid.gelib.App"
         android:icon="@drawable/guia"
         android:label="@string/app_name"
-        android:theme="@style/Theme.D1" >
+        android:theme="@style/Theme.AppCompat.Light"  >
         <uses-library android:name="com.google.android.maps" />
 
+        <meta-data
+	    android:name="com.google.android.gms.version"
+	    android:value="@integer/google_play_services_version" />
+        
         <activity
             android:name="br.com.mythe.droid.gelib.activities.SplashScreenActivity"
             android:label="@string/app_name" >
@@ -67,7 +85,7 @@
                 android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
         </activity>
         <activity
-            android:name="br.com.mythe.droid.gelib.activities.AboutActivity"
+            android:name="br.com.mythe.droid.gelib.activities.AboutFragment"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -80,7 +98,7 @@
                 android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
         </activity>
         <activity
-            android:name="br.com.mythe.droid.gelib.activities.ListaPaisesActivity"
+            android:name="br.com.mythe.droid.gelib.activities.ListaPaisesFragment"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -93,7 +111,7 @@
                 android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
         </activity>
         <activity
-            android:name="br.com.mythe.droid.gelib.activities.ListaEstadosActivity"
+            android:name="br.com.mythe.droid.gelib.activities.ListaEstadosFragment"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -106,7 +124,7 @@
                 android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
         </activity>
         <activity
-            android:name="br.com.mythe.droid.gelib.activities.ListaCidadesActivity"
+            android:name="br.com.mythe.droid.gelib.activities.ListaCidadesFragment"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/app_name" >
             <intent-filter>
@@ -120,7 +138,7 @@
                 android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
         </activity>
         <activity
-            android:name="br.com.mythe.droid.gelib.activities.ListaItensActivity"
+            android:name="br.com.mythe.droid.gelib.activities.ListaItensFragment"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/app_name" >
             <intent-filter>
@@ -135,8 +153,7 @@
         </activity>
         <activity
             android:name="br.com.mythe.droid.gelib.activities.ViewInMapActivity"
-            android:label="@string/app_name"
-            android:theme="@style/CustomTheme" >
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -149,8 +166,20 @@
         </activity>
         <activity
             android:name="br.com.mythe.droid.gelib.activities.MapaProximosActivity"
-            android:label="@string/app_name"
-            android:theme="@style/CustomTheme" >
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
+        </activity>
+        <activity
+            android:name="br.com.mythe.droid.gelib.activities.RadarProximidadeFragment"
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -176,7 +205,7 @@
                 android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
         </activity>
         <activity
-            android:name="br.com.mythe.droid.gelib.activities.NovoItemActivity"
+            android:name="br.com.mythe.droid.gelib.activities.NovoItemFragment"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/lb_detalhes"
             android:windowSoftInputMode="stateHidden" >
@@ -215,7 +244,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="br.com.mythe.droid.gelib.activities.ListaFavoritosActivity"
+            android:name="br.com.mythe.droid.gelib.activities.ListaFavoritosFragment"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -228,7 +257,7 @@
                 android:value="br.com.mythe.droid.gelib.activities.SearchGuiaActivity" />
         </activity>
         <activity
-            android:name="br.com.mythe.droid.gelib.activities.ListaProximosActivity"
+            android:name="br.com.mythe.droid.gelib.activities.ListaProximosFragment"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -324,6 +353,8 @@
             android:label="Nova Dica"
             android:windowSoftInputMode="stateHidden" >
         </activity>
+        
+        <activity android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
 
         <!-- android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" -->
         <activity
@@ -335,6 +366,11 @@
         <provider
             android:name="br.com.mythe.droid.gelib.provider.SuggestionProviderFull"
             android:authorities="br.com.mythe.droid.gelib.provider.SuggestionProviderFull" />
+    
+         <meta-data
+	    	android:name="com.google.android.maps.v2.API_KEY"
+	    	android:value="AIzaSyDiqYmQIH2Mi5o_WSVw5QWy7Z_wAhO4PTo"/>
+    
     </application>
     
 

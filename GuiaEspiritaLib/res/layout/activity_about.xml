@@ -4,8 +4,6 @@
     android:layout_height="wrap_content"
     android:orientation="vertical" >
 
-    <include layout="@layout/custom_title_bar" />
-
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
@@ -55,7 +53,7 @@
                     android:layout_above="@+id/textView1"
                     android:layout_alignParentLeft="true"
                     android:gravity="center"
-                    android:text="©2011 - Mythe Tecnologia"
+                    android:text="©2014 - Mythe Tecnologia"
                     android:textSize="10sp" />
 
                 <TextView
@@ -65,7 +63,7 @@
                     android:layout_above="@+id/emp_name"
                     android:layout_alignParentLeft="true"
                     android:gravity="center"
-                    android:text="Guia Espírita 1.5"
+                    android:text="Guia Espírita 1.6"
                     android:textStyle="bold" />
             </RelativeLayout>
         </TableRow>

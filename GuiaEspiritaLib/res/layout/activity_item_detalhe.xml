@@ -4,15 +4,13 @@
     android:layout_height="wrap_content"
     android:orientation="vertical" >
 
-    <include
-        android:id="@+id/header"
-        layout="@layout/custom_title_bar" />
-        
    <LinearLayout android:id="@+id/adMob" 
        android:layout_width="fill_parent" 
        android:layout_height="wrap_content" 
        android:gravity="center_horizontal"
-       android:layout_alignParentBottom="true" />
+       android:layout_alignParentBottom="true" 
+       android:orientation="horizontal"
+        android:background="@color/adbackground"/>
 
     <LinearLayout
         android:id="@+id/bottom"
@@ -55,7 +53,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/bottom"
-        android:layout_below="@id/header" >
+		android:layout_alignParentTop="true" >
 
         <LinearLayout
             android:layout_width="fill_parent"

@@ -15,11 +15,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 import br.com.mythe.droid.gelib.R;
-import br.com.mythe.droid.gelib.activities.AboutActivity;
+import br.com.mythe.droid.gelib.activities.AboutFragment;
 import br.com.mythe.droid.gelib.activities.HomeActivity;
-import br.com.mythe.droid.gelib.activities.ListaEstadosActivity;
-import br.com.mythe.droid.gelib.activities.ListaFavoritosActivity;
-import br.com.mythe.droid.gelib.activities.ListaProximosActivity;
+import br.com.mythe.droid.gelib.activities.ListaEstadosFragment;
+import br.com.mythe.droid.gelib.activities.ListaFavoritosFragment;
+import br.com.mythe.droid.gelib.activities.ListaProximosFragment;
 import br.com.mythe.droid.gelib.activities.MapaProximosActivity;
 import br.com.mythe.droid.gelib.activities.Preferences;
 
@@ -103,7 +103,7 @@ public abstract class MapaActivity extends MapActivity {
 
 	public void onClickAbout (View v)
 	{
-	    startActivity (new Intent(getApplicationContext(), AboutActivity.class));
+	    startActivity (new Intent(getApplicationContext(), AboutFragment.class));
 	}
 
 	/**
@@ -117,17 +117,17 @@ public abstract class MapaActivity extends MapActivity {
 	{
 	    int id = v.getId ();
 	    if (id == R.id.home_btn_lista_item) {
-			startActivity (new Intent(getApplicationContext(), ListaEstadosActivity.class));
+			startActivity (new Intent(getApplicationContext(), ListaEstadosFragment.class));
 		} else if (id == R.id.home_btn_favoritos) {
-			startActivity (new Intent(getApplicationContext(), ListaFavoritosActivity.class));
+			startActivity (new Intent(getApplicationContext(), ListaFavoritosFragment.class));
 		} else if (id == R.id.home_btn_items_proximos) {
-			startActivity (new Intent(getApplicationContext(), ListaProximosActivity.class));
+			startActivity (new Intent(getApplicationContext(), ListaProximosFragment.class));
 		} else if (id == R.id.home_btn_mapa_proximos) {
 			startActivity (new Intent(getApplicationContext(), MapaProximosActivity.class));
 		} else if (id == R.id.home_btn_preferences) {
 			startActivity (new Intent(getApplicationContext(), Preferences.class));
 		} else if (id == R.id.home_btn_about) {
-			startActivity (new Intent(getApplicationContext(), AboutActivity.class));
+			startActivity (new Intent(getApplicationContext(), AboutFragment.class));
 		} else {
 		}
 	}

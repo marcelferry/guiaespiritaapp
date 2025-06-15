@@ -125,7 +125,8 @@ public class ViewInMapActivity extends MapaActivity {
         }
 
         public void setViewport(int width, int height) {
-            delegate.setViewport(width, height);
+        	//FIX-ME
+            //delegate.setViewport(width, height);
         }
 
         public boolean isOpaque() {
@@ -265,7 +266,8 @@ public class ViewInMapActivity extends MapaActivity {
         }
 
         public GL getGL() {
-            return delegate.getGL();
+        	//FIX-ME
+            return null; //delegate.getGL();
         }
 
         public boolean quickReject(RectF rect, EdgeType type) {
@@ -529,7 +531,7 @@ public class ViewInMapActivity extends MapaActivity {
 
 	public void onClickAbout (View v)
 	{
-	    startActivity (new Intent(getApplicationContext(), AboutActivity.class));
+	    startActivity (new Intent(getApplicationContext(), AboutFragment.class));
 	}
 
 	/**
@@ -543,17 +545,17 @@ public class ViewInMapActivity extends MapaActivity {
 	{
 	    int id = v.getId ();
 	    if (id == R.id.home_btn_lista_item) {
-			startActivity (new Intent(getApplicationContext(), ListaEstadosActivity.class));
+			startActivity (new Intent(getApplicationContext(), ListaEstadosFragment.class));
 		} else if (id == R.id.home_btn_favoritos) {
-			startActivity (new Intent(getApplicationContext(), ListaFavoritosActivity.class));
+			startActivity (new Intent(getApplicationContext(), ListaFavoritosFragment.class));
 		} else if (id == R.id.home_btn_items_proximos) {
-			startActivity (new Intent(getApplicationContext(), ListaProximosActivity.class));
+			startActivity (new Intent(getApplicationContext(), ListaProximosFragment.class));
 		} else if (id == R.id.home_btn_mapa_proximos) {
 			startActivity (new Intent(getApplicationContext(), MapaProximosActivity.class));
 		} else if (id == R.id.home_btn_preferences) {
 			startActivity (new Intent(getApplicationContext(), Preferences.class));
 		} else if (id == R.id.home_btn_about) {
-			startActivity (new Intent(getApplicationContext(), AboutActivity.class));
+			startActivity (new Intent(getApplicationContext(), AboutFragment.class));
 		} else {
 		}
 	}

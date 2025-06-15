@@ -4,16 +4,14 @@
     android:layout_height="fill_parent"
     android:background="#ffffffff" >
 
-    <include
-        android:id="@+id/header"
-        layout="@layout/home_title_bar" />
-
     <LinearLayout
         android:id="@+id/adMob"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal" 
+        android:orientation="horizontal"
+        android:background="@color/adbackground"/>
 
     <LinearLayout
         android:id="@+id/ControlButtons"
@@ -47,7 +45,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/ControlButtons"
-        android:layout_below="@id/header" >
+        android:layout_alignParentTop="true" >
 
         <LinearLayout
             android:id="@+id/widget98"
@@ -167,15 +165,14 @@
                         android:text="@string/lblPais" >
                     </TextView>
 
-                    <Spinner
+                    <org.jredfoot.sophielib.view.NoDefaultSpinner
                         android:id="@+id/spPais"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:focusable="true"
                         android:focusableInTouchMode="true"
-                        android:prompt="@string/paises" >
-                        </Spinner>
+                        android:prompt="@string/paises" />
                     
                 </TableRow>
                 
@@ -197,15 +194,14 @@
                         android:text="@string/lblEstado" >
                     </TextView>
 
-                    <Spinner
+                    <org.jredfoot.sophielib.view.NoDefaultSpinner
                         android:id="@+id/spEstado"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:focusable="true"
                         android:focusableInTouchMode="true"
-                        android:prompt="@string/estados" >
-                    </Spinner>
+                        android:prompt="@string/estados" />
                 </TableRow>
 
                 <TableRow

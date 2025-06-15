@@ -6,7 +6,6 @@ import org.jredfoot.sophielib.util.MapUtils;
 import org.jredfoot.sophielib.util.NetUtils;
 import org.jredfoot.sophielib.util.Utils;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -14,23 +13,24 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.Toast;
 import br.com.mythe.droid.gelib.R;
-import br.com.mythe.droid.gelib.activities.AboutActivity;
+import br.com.mythe.droid.gelib.activities.AboutFragment;
 import br.com.mythe.droid.gelib.activities.HomeActivity;
-import br.com.mythe.droid.gelib.activities.ListaEstadosActivity;
-import br.com.mythe.droid.gelib.activities.ListaFavoritosActivity;
-import br.com.mythe.droid.gelib.activities.ListaPaisesActivity;
-import br.com.mythe.droid.gelib.activities.ListaProximosActivity;
-import br.com.mythe.droid.gelib.activities.MapaProximosActivity;
+import br.com.mythe.droid.gelib.activities.ListaEstadosFragment;
+import br.com.mythe.droid.gelib.activities.ListaFavoritosFragment;
+import br.com.mythe.droid.gelib.activities.ListaPaisesFragment;
+import br.com.mythe.droid.gelib.activities.ListaProximosFragment;
 import br.com.mythe.droid.gelib.activities.Preferences;
+import br.com.mythe.droid.gelib.activities.RadarProximidadeFragment;
 import br.com.mythe.droid.gelib.login.LoginActivity;
 
-public abstract class DashboardActivity extends Activity {
+public abstract class DashboardActivity extends  ActionBarActivity {
 	
 	TransacaoTask task;
 
@@ -48,7 +48,7 @@ public abstract class DashboardActivity extends Activity {
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		//requestWindowFeature(Window.FEATURE_NO_TITLE);
 	}
 
 	/**
@@ -171,56 +171,7 @@ public abstract class DashboardActivity extends Activity {
 	 */
 
 	public void onClickAbout(View v) {
-		startActivity(new Intent(getApplicationContext(), AboutActivity.class));
-	}
-
-	/**
-	 * Handle the click of a Feature button.
-	 * 
-	 * @param v
-	 *            View
-	 * @return void
-	 */
-
-	public void onClickFeature(View v) {
-		int id = v.getId();
-		if (id == R.id.home_btn_lista_item) {
-			startActivity(new Intent(getApplicationContext(),
-					ListaEstadosActivity.class));
-		} else if (id == R.id.home_btn_favoritos) {
-			startActivity(new Intent(getApplicationContext(),
-					ListaFavoritosActivity.class));
-		} else if (id == R.id.home_btn_items_proximos) {
-			// Check if enabled and if not send user to the GSP settings
-			// Better solution would be to display a dialog and suggesting to
-			// go to the settings
-			if (!MapUtils.isGPSActive(this)) {
-				abrirDialogGPS();
-			} else {
-				startActivity(new Intent(getApplicationContext(),
-						ListaProximosActivity.class));
-			}
-		} else if (id == R.id.home_btn_mapa_proximos) {
-			if (!MapUtils.isGPSActive(this)) {
-				abrirDialogGPS();
-			} else {
-				if (NetUtils.isNetworkConnected(this)) {
-					startActivity(new Intent(getApplicationContext(),
-							MapaProximosActivity.class));
-				} else {
-					toast("Não há conexão no momento. Tente mais tarde.");
-				}
-			}
-		} else if (id == R.id.home_btn_country) {
-			startActivity(new Intent(getApplicationContext(),
-					ListaPaisesActivity.class));
-		} else if (id == R.id.home_btn_preferences) {
-			startActivity(new Intent(getApplicationContext(), Preferences.class));
-		} else if (id == R.id.home_btn_about) {
-			startActivity(new Intent(getApplicationContext(),
-					AboutActivity.class));
-		} else {
-		}
+		startActivity(new Intent(getApplicationContext(), AboutFragment.class));
 	}
 
 	/**
@@ -278,33 +229,6 @@ public abstract class DashboardActivity extends Activity {
 	public void trace(String msg) {
 		Log.d("Demo", msg);
 		toast(msg);
-	}
-
-	public void abrirDialogGPS() {
-		AlertDialog.Builder alert = new AlertDialog.Builder(this);
-
-		alert.setTitle("Habilitar Localização");
-		alert.setMessage("Você deve ativar os serviços de localização para utilizar essa funcionalidade.");
-
-		alert.setPositiveButton("Habilitar",
-				new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int whichButton) {
-						Intent intent = new Intent(
-								Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-						startActivity(intent);
-					}
-				});
-
-		alert.setNegativeButton("Agora não",
-				new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int whichButton) {
-						// Canceled.
-					}
-				});
-
-		alert.show();
-		// see
-		// http://www.androidsnippets.com/prompt-user-input-with-an-alertdialog
 	}
 
 	public static void showAlertDialog(Context context, int messageResId,

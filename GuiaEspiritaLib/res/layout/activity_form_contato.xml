@@ -4,16 +4,14 @@
     android:layout_height="fill_parent"
     android:background="#ffffffff" >
 
-    <include
-        android:id="@+id/header"
-        layout="@layout/home_title_bar" />
-    
     <LinearLayout
         android:id="@+id/adMob"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true" 
+        android:orientation="horizontal"
+        android:background="@color/adbackground"/>
     
     <LinearLayout
         android:id="@+id/ControlButtons"
@@ -46,7 +44,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" 
         android:layout_above="@id/ControlButtons"
-        android:layout_below="@id/header">
+        android:layout_alignParentTop="true">
 
         <LinearLayout
             android:layout_width="fill_parent"

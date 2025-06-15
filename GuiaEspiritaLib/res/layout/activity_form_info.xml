@@ -4,10 +4,6 @@
     android:layout_height="fill_parent"
     android:background="#ffffffff" >
 
-    <include
-        android:id="@+id/header"
-        layout="@layout/home_title_bar" />
-
     <LinearLayout
         android:id="@+id/ControlButtons"
         android:layout_width="fill_parent"
@@ -38,7 +34,7 @@
         android:id="@+id/ContactScroll"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/header" 
+        android:layout_alignParentTop="true"
         android:layout_above="@id/ControlButtons">
 
         <LinearLayout

@@ -1,7 +1,12 @@
 package br.com.mythe.droid.gelib.vo;
 
+import android.graphics.Bitmap;
 
-public class CasaVO {
+import com.google.android.gms.maps.model.LatLng;
+import com.google.maps.android.clustering.ClusterItem;
+
+
+public class CasaVO implements ClusterItem {
 	
 	public long _id;
 	public long id_casa;
@@ -14,10 +19,16 @@ public class CasaVO {
 	public String fone;
 	public String email;
 	public String site;
-	public Long lat;
-	public Long lng;
+	public Double lat;
+	public Double lng;
 	public String info;
 	public String type;
 	public String distance;
 	public String atualizado;
+	public Bitmap image;
+	
+	@Override
+	public LatLng getPosition() {
+		return new LatLng(lat, lng);
+	}
 }

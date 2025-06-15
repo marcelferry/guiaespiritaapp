@@ -5,24 +5,21 @@
     android:background="#ffffffff"
     android:orientation="vertical" >
 
-    <include
-        android:id="@+id/header"
-        android:layout_alignParentTop="true"
-        layout="@layout/custom_title_bar" />
-
     <LinearLayout
         android:id="@+id/adMob"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:gravity="center_horizontal" />
+        android:gravity="center_horizontal" 
+        android:orientation="horizontal"
+        android:background="@color/adbackground"/>
 
     <ListView
         android:id="@android:id/list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_above="@id/adMob"
-        android:layout_below="@id/header"
+        android:layout_alignParentTop="true"
         android:dividerHeight="2sp"
         android:padding="0sp" >
     </ListView>

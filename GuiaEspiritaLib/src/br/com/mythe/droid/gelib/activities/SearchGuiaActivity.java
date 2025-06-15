@@ -2,6 +2,7 @@ package br.com.mythe.droid.gelib.activities;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.app.SearchManager;
 import android.content.Intent;
@@ -12,7 +13,7 @@ import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.ListView;
 import br.com.mythe.droid.gelib.R;
-import br.com.mythe.droid.gelib.activities.dashboard.ListaActivity;
+import br.com.mythe.droid.gelib.activities.dashboard.BaseListFragment;
 import br.com.mythe.droid.gelib.cursor.CasasListaCursor;
 import br.com.mythe.droid.gelib.cursor.ItemListaCursorAdapter;
 import br.com.mythe.droid.gelib.database.objects.Casas;
@@ -20,7 +21,7 @@ import br.com.mythe.droid.gelib.dialog.ListClickDialog;
 import br.com.mythe.droid.gelib.provider.CasasEspiritasProvider;
 import br.com.mythe.droid.gelib.provider.SuggestionProviderFull;
 
-public class SearchGuiaActivity extends ListaActivity {
+public class SearchGuiaActivity extends ListActivity {
 
 	private static final int SEARCHING_DIALOG = 0;
 	private Dialog mInfoDialog;
@@ -67,14 +68,8 @@ public class SearchGuiaActivity extends ListaActivity {
 	private void executeSearch() {
 		String[] projection = new String[] { Casas._ID, Casas.COD_CASA,
 				Casas.NOME, Casas.ENDERECO, Casas.BAIRRO, Casas.CIDADE,
-				Casas.LAT, Casas.LNG };
-
-		String[] displayFields = new String[] {
-				Casas.NOME, Casas.ENDERECO, Casas.BAIRRO };
-
-		int[] displayViews = new int[] {
-				// R.id.codigo,
-				R.id.nome, R.id.endereco, R.id.bairro };
+				Casas.LAT, Casas.LNG,
+				Casas.TYPE };
 
 		mFilterString = mFilterString.replaceAll(" ", "%");
 		String selection = " lower(" + Casas.NOME + ") like lower(?) " +
@@ -82,7 +77,7 @@ public class SearchGuiaActivity extends ListaActivity {
 				       "  OR lower(" + Casas.BAIRRO + ") like lower(?)" +
 				       "  OR lower(" + Casas.CEP + ") like lower(?)" +
 				       "  OR lower(" + Casas.CIDADE + ") like lower(?)";
-		Cursor cur = managedQuery(CasasEspiritasProvider.getContentUri(isLite() , Casas.CONTENT ), projection, selection,
+		Cursor cur = getContentResolver().query(CasasEspiritasProvider.getContentUri(isLite() , Casas.CONTENT ), projection, selection,
 				new String[] { "%" + mFilterString + "%",
 						"%" + mFilterString + "%",
 						"%" + mFilterString + "%",
@@ -120,6 +115,10 @@ public class SearchGuiaActivity extends ListaActivity {
 			
 		}
 		return null;
+	}
+	
+	protected boolean isLite() {
+		return getPackageName().toLowerCase().contains("lite");
 	}
 
 }

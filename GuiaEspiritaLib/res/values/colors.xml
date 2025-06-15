@@ -26,4 +26,7 @@
     
     <color name="toolbar_background">#BDBBBB</color>
     <color name="date_color">#000</color>
+    
+    <color name="bg_color">#ffffff</color>
+    <color name="adbackground">#BDBBBB</color>
 </resources>

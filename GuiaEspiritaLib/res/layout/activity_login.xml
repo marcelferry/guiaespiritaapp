@@ -9,30 +9,6 @@
         android:layout_height="wrap_content"
         android:background="#ffffff" >
 
-        <!-- Header  Starts -->
-
-        <LinearLayout
-            android:id="@+id/header"
-            android:layout_width="fill_parent"
-            android:layout_height="45dip"
-            android:background="@drawable/header_bg"
-            android:paddingBottom="5dip"
-            android:paddingTop="5dip" >
-
-            <!-- Logo Start -->
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dip"
-                android:src="@drawable/logo"
-                android:visibility="gone" />
-            <!-- Logo Ends -->
-            <TextView
-                style="@style/TitleBarText" 
-                android:text="@string/app_name" />
-        </LinearLayout>
-        <!-- Header Ends -->
         <!-- Footer Start -->
 
         <LinearLayout
@@ -40,7 +16,8 @@
             android:layout_width="fill_parent"
             android:layout_height="90dip"
             android:layout_alignParentBottom="true"
-            android:background="@layout/footer_repeat" >
+            android:background="@layout/footer_repeat" 
+            android:orientation="vertical">
         </LinearLayout>
         <!-- Footer Ends -->
 
@@ -48,10 +25,9 @@
         <!-- Login Form -->
 
         <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/header"
+            android:layout_alignParentTop="true"
             android:orientation="vertical"
             android:padding="10dip" >
 

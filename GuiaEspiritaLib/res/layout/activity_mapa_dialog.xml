@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapActivity" >
+
+	    <LinearLayout
+	        android:id="@+id/adMob"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:gravity="center_horizontal"
+	        android:layout_alignParentBottom="true" 
+	        android:orientation="horizontal"
+	        android:background="@color/adbackground"/>
+
+        <fragment
+            android:id="@+id/mapdialog"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            android:layout_above="@+id/footer"/>
+        
+        <LinearLayout
+	        android:id="@+id/footer"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:padding="20sp" 
+	        android:layout_above="@id/adMob">
+	
+	        <Button
+	            android:id="@+id/OkDialog"
+	            style="@style/ButtonTextMedioWrap"
+	            android:background="@drawable/btn_gray"
+	            android:layout_width="0dip"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="@android:string/ok" />
+	
+	        <Button
+	            android:id="@+id/CancelDialog"
+	            style="@style/ButtonTextMedioWrap"
+	            android:background="@drawable/btn_gray"
+	            android:layout_width="0dip"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="@android:string/cancel" />
+	    </LinearLayout>
+        
+
+</RelativeLayout>

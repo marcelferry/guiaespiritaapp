@@ -71,7 +71,7 @@ public class NovoItemEnderecoDialog extends DashboardActivity {
 
 		
 		if (mPais != null && mPais.trim() != "") {
-			//String selectedValue = Utils.getPais(mPais);
+			//String selectedValue = GelibUtils.getPais(mPais);
 			int selectedIndex = adapterPais.getPosition(mPais);
 			spPais.setSelection(selectedIndex);
 			if(mPais.equals("Brasil")){
